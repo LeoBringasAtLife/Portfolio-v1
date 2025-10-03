@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos de LeooBringasAtLife | Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 2rem;
+            background-color: #f2f8fc;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+
+        ::selection {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .contenedor {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tarjeta {
+            width: 320px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e2e8f0;
+        }
+
+        .tarjeta img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+        }
+
+        .contenido {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .subtitulo {
+            font-size: 0.8rem;
+            color: #555;
+            margin: 0;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin: 0;
+            color: #1a1a1a;
+        }
+
+        p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #333;
+        }
+
+        .boton {
+            margin-top: 1rem;
+            align-self: flex-start;
+            background-color: #002b50;
+            color: white;
+            padding: 0.6rem 1rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .boton:hover {
+            background-color: #004a88;
+        }
+
+
+        .section-title h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .cards-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            width: 250px;
+            padding: 16px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .card button {
+            background-color: #0067b8;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+        <section id="proyectos" class="contenedor">
+            <!-- Tarjeta 1 -->
+            <div class="tarjeta">
+                <img src="https://placehold.co/240x240?text=Project 1" alt="Microsoft 50 años">
+                <div class="contenido">
+                    <p class="subtitulo">HTML - CSS - JAVASCRIPT</p>
+                    <h3>Nombre del proyecto 1</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea maxime consequuntur vel pariatur eos
+                        deserunt vitae asperiores, eaque non possimus sint voluptates minima quia blanditiis quidem id
+                        in molestias harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ipsa saepe
+                        in fugit iste necessitatibus consequuntur, adipisci assumenda quod id tempora, nulla non nemo
+                        earum aut? Illo eligendi blanditiis nihil
+                    </p>
+                    <button class="boton">Boton 1</button>
+                </div>
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="tarjeta">
+                <img src="https://placehold.co/240x240?text=Project 2"
+                    alt="Captura de pantalla de la pagina de la copia de Twitter (Empresa de Elon Musk)">
+                <div class="contenido">
+                    <p class="subtitulo">HTML - CSS</p>
+                    <h3>Copia de X</h3>
+                    <p>100% hecho con HTML y CSS, ni una linea de JS</p>
+                    <button class="boton">Boton 2</button>
+                </div>
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="tarjeta">
+                <img src="https://placehold.co/240x240?text=Project 3" alt="Let's talk">
+                <div class="contenido">
+                    <p class="subtitulo">HTML - CSS</p>
+                    <h3>Copia de Google</h3>
+                    <p>Descripción de proyecto.</p>
+                    <button class="boton">Boton 3</button>
+                </div>
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="tarjeta">
+                <img src="https://placehold.co/240x240?text=Project 4" alt="Microsoft 50 años">
+                <div class="contenido">
+                    <p class="subtitulo">HTML - CSS - JAVASCRIPT</p>
+                    <h3>Nombre del proyecto 4</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, molestiae? Quia quisquam libero
+                        non totam, tempore officiis voluptatem dolore eveniet quaerat eius. Id at veritatis, excepturi
+                        eaque architecto neque quis!</p>
+                    <button class="boton">Boton 4</button>
+                </div>
+            </div>
+            <!-- Tarjeta 5 -->
+            <div class="tarjeta">
+                <img src="https://placehold.co/240x240?text=Project 5" alt="Gatito Copilot">
+                <div class="contenido">
+                    <p class="subtitulo">HTML - CSS - JAVASCRIPT</p>
+                    <h3>Nombre del proyecto 5 </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est fugiat adipisci, officiis ipsum
+                        blanditiis, magni, veritatis tenetur nemo omnis quas voluptatum! Provident voluptate autem ipsum
+                        itaque architecto. Consequuntur, a! Exercitationem.</p>
+                    <button class="boton">Boton 5</button>
+                </div>
+            </div>
+            <!-- Tarjeta 6 -->
+            <div class="tarjeta">
+                <img src="https://placehold.co/240x240?text=Project 6" alt="Let's talk">
+                <div class="contenido">
+                    <p class="subtitulo">HTML - CSS - JAVASCRIPT</p>
+                    <h3>Portfolio Web</h3>
+                    <p>Mi portfolio personal realizado con HTML, CSS y JavaScript.</p>
+                    <button class="boton">Boton 6</button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>

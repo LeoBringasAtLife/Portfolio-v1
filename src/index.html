@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio de Leonardo Bringas – Desarrollador web junior con experiencia en HTML, CSS, JavaScript y más." />
+    <meta name="author" content="Leonardo Bringas" />
+    <meta name="keywords" content="desarrollador web, frontend, HTML, CSS, JavaScript, portfolio" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" href="assets/tools/logo.ico" type="image/x-icon" />
+    <title>LeooBringasAtLife | Portfolio</title>
+</head>
+
+<body id="top">
+    <!-- Header -->
+    <header class="encabezado">
+        <div class="perfil">
+            <img class="foto" src="assets/image/leo.png" alt="Foto de Leonardo Bringas" loading="lazy" />
+            <div class="info">
+                <h1 class="titulo-enlace">
+                    <span>@LeoBringasAtLife</span>
+                </h1>
+                <p class="descripcion">Desarrollador web | +1 año de experiencia</p>
+                <a href="assets/image/documentos/CV-LeoBri.pdf" download class="btn-cv"
+                    aria-label="Descargar Curriculum Vitae de Leonardo Bringas">Descargar CV</a>
+            </div>
+        </div>
+
+        <button class="menu-toggle" aria-label="Abrir / cerrar menú" aria-expanded="false" aria-controls="menu">
+            <span class="menu-dot"></span>
+            <span class="menu-dot"></span>
+            <span class="menu-dot"></span>
+        </button>
+        <div class="menu-overlay"></div>
+
+        <nav class="menu" id="menu">
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#proyectos-destacados">Proyectos</a>
+            <a href="#tecnologias">Tecnologías</a>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <!-- Acerca de mí -->
+        <section id="sobre-mi" class="acerca-de-mi">
+            <div class="acerca-de-mi__contenido">
+                <h2>Acerca de mí</h2>
+                <p>Estudiante de desarrollo web con pasión por crear interfaces limpias, funcionales y modernas. Me
+                    formo en HTML, CSS, JavaScript y Python aplicándolas en proyectos reales.</p>
+                <p>Busco espacios donde pueda seguir creciendo, aprender en equipo y aportar soluciones creativas.</p>
+            </div>
+        </section>
+
+        <!-- Proyectos -->
+        <section class="proyectos-destacados" id="proyectos-destacados">
+            <h2>Proyectos Destacados</h2>
+            <div class="cards-destacados">
+                <article class="card-proyecto">
+                    <img src="https://picsum.photos/240?random=1" width="240" height="240"
+                        alt="Miniatura del proyecto Twitter Clone" loading="lazy" />
+                    <div class="card-proyecto-contenido">
+                        <h3>Twitter Clone</h3>
+                        <p>Replica funcional de Twitter con publicaciones en tiempo real y diseño responsive.</p>
+                        <a href="https://github.com/LeooBringasAtLife/twitter-clone" target="_blank"
+                            rel="noopener noreferrer" class="btn">Ver proyecto</a>
+                    </div>
+                </article>
+
+                <article class="card-proyecto">
+                    <img src="https://picsum.photos/240?random=2" width="240" height="240"
+                        alt="Miniatura del proyecto ToDo App" loading="lazy" />
+                    <div class="card-proyecto-contenido">
+                        <h3>ToDo App</h3>
+                        <p>Gestor de tareas con LocalStorage, filtros y animaciones suaves.</p>
+                        <a href="https://github.com/LeooBringasAtLife/todo-app" target="_blank"
+                            rel="noopener noreferrer" class="btn">Ver proyecto</a>
+                    </div>
+                </article>
+
+                <article class="card-proyecto">
+                    <img src="https://picsum.photos/240?random=3" width="240" height="240"
+                        alt="Miniatura del proyecto Landing Page" loading="lazy" />
+                    <div class="card-proyecto-contenido">
+                        <h3>Landing Page</h3>
+                        <p>Landing moderna con animaciones, formulario y diseño 100% responsive.</p>
+                        <a href="https://github.com/LeooBringasAtLife/landing-page" target="_blank"
+                            rel="noopener noreferrer" class="btn">Ver proyecto</a>
+                    </div>
+                </article>
+            </div>
+            <div style="text-align:center; margin-top:2rem;">
+                <a href="/src/proyectos.html" class="btn btn-secundario">Ver todos los proyectos</a>
+            </div>
+        </section>
+
+        <!-- Tecnologías -->
+        <section id="tecnologias" class="tech-section">
+            <h2>Tecnologías</h2>
+            <div class="slider" aria-label="Carrusel de herramientas">
+                <div class="slide-track">
+                    <div class="slide">
+                        <img src="assets/tools/icons-html.svg" alt="HTML" />
+                        <p>HTML</p>
+                    </div>
+                    <div class="slide">
+                        <img src="assets/tools/icons-css.svg" alt="CSS" />
+                        <p>CSS</p>
+                    </div>
+                    <div class="slide">
+                        <img src="assets/tools/icons-javascript.svg" alt="JavaScript" />
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="slide">
+                        <img src="assets/tools/icons-python.svg" alt="Python" />
+                        <p>Python</p>
+                    </div>
+                    <div class="slide">
+                        <img src="assets/tools/icons-git.svg" alt="Git" />
+                        <p>Git</p>
+                    </div>
+                    <div class="slide">
+                        <img src="assets/tools/icons-visual-studio-code-2019.svg" alt="VS Code" />
+                        <p>VS Code</p>
+                    </div>
+
+                    <!-- Duplicados para efecto infinito -->
+                    <div class="slide">
+                        <img src="assets/tools/icons-html.svg" alt="HTML" />
+                        <p>HTML</p>
+                    </div>
+                    <div class="slide">
+                        <img src="assets/tools/icons-css.svg" alt="CSS" />
+                        <p>CSS</p>
+                    </div>
+                    <div class="slide">
+                        <img src="assets/tools/icons-javascript.svg" alt="JavaScript" />
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="slide">
+                        <img src="assets/tools/icons-python.svg" alt="Python" />
+                        <p>Python</p>
+                    </div>
+                    <div class="slide">
+                        <img src="assets/tools/icons-git.svg" alt="Git" />
+                        <p>Git</p>
+                    </div>
+                    <div class="slide">
+                        <img src="assets/tools/icons-visual-studio-code-2019.svg" alt="VS Code" />
+                        <p>VS Code</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>
