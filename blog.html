@@ -5,18 +5,26 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Blog - Leonardo Bringas</title>
-   <!-- Base styles and variables -->
-   <link rel="stylesheet" href="src/assets/css/style.css">
-   <!-- Blog specific styles -->
+   <meta name="description" content="Blog personal de Leonardo Bringas sobre desarrollo web y programación">
+   <meta name="author" content="Leonardo Bringas">
+   <!-- Styles (global.css se importa dentro de blog.css) -->
    <link rel="stylesheet" href="src/assets/css/blog.css">
    <!-- Fonts -->
    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+   <!-- Material Icons -->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
    <div class="blog-container">
       <header class="blog-header">
-         <a href="index.html" class="back-link">Volver a la pagina principal</a>
+         <div class="blog-header-content">
+            <a href="index.html" class="back-link">Volver a la pagina principal</a>
+            <button id="btn-toggle-theme" class="btn-toggle-theme" aria-label="Cambiar a modo oscuro" aria-pressed="false">
+               <span class="material-icons">dark_mode</span>
+               <span class="toggle-text">Modo oscuro</span>
+            </button>
+         </div>
       </header>
 
       <div class="blog-layout">
@@ -82,8 +90,7 @@
       </div>
    </div>
 
-   <!-- Script for dark mode check if needed, reusing index.js logic if applicable, 
-          but keeping it simple for now as requested -->
+   <script src="src/assets/js/theme.js"></script>
 </body>
 
 </html>

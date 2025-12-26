@@ -8,7 +8,12 @@
     content="Portfolio de Leonardo Bringas - Desarrollador web junior con experiencia en HTML, CSS, JavaScript y más." />
   <meta name="author" content="Leonardo Bringas" />
   <meta name="keywords" content="desarrollador web, frontend, HTML, CSS, JavaScript, portfolio" />
+  <!-- Styles (global.css se importa dentro de style.css) -->
   <link rel="stylesheet" href="src/assets/css/style.css" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet" />
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link rel="icon" href="src/assets/tools/logo.ico" type="image/x-icon" />
 
   <title>LeoBringasAtLife | Portfolio Web</title>
@@ -35,6 +40,10 @@
         <div class="acciones-cv">
           <a href="pdf/CV_LEONARDO_ISAIAS_BRINGAS_MONTERO.pdf" download class="btn-cv">Descargar CV</a>
           <button id="btn-ver-cv" class="btn-cv btn-preview">Vista Previa CV</button>
+          <button id="btn-toggle-theme" class="btn-toggle-theme" aria-label="Cambiar a modo oscuro" aria-pressed="false">
+            <span class="material-icons">dark_mode</span>
+            <span class="toggle-text">Modo oscuro</span>
+          </button>
         </div>
       </div>
     </div>
@@ -59,7 +68,7 @@
           <div class="card-proyecto-contenido">
             <h3>Paint JS Win95</h3>
             <p>
-              Clone de Microsoft Paint con estética retro. Un ejercicio avanzado de manipulación de Canvas y UI clásica.
+              Aplicación web inspirada en Microsoft Paint con estética retro Windows 95. Permite dibujar, borrar y guardar imágenes usando Canvas, recreando la experiencia clásica con JavaScript moderno.
             </p>
             <p class="tech"><small>JavaScript — Canvas</small></p>
             <a href="https://github.com/LeooBringasAtLife/Paint-JS-Win95" target="_blank" rel="noopener noreferrer"
@@ -74,8 +83,7 @@
           <div class="card-proyecto-contenido">
             <h3>Buscador Wikipedia</h3>
             <p>
-              Herramienta que consulta la API de Wikipedia para mostrar resultados al instante. Práctica de Fetch API y
-              manejo de datos.
+              Aplicación web que permite buscar artículos de Wikipedia en tiempo real, mostrando resultados dinámicamente mediante integración con la Wikipedia API. Destaca el manejo eficiente de peticiones asíncronas, respuestas JSON y actualización dinámica del DOM.
             </p>
             <p class="tech"><small>HTML — Fetch API</small></p>
             <a href="https://github.com/LeooBringasAtLife/Searcher-Wikipedia" target="_blank" rel="noopener noreferrer"
@@ -90,7 +98,7 @@
           <div class="card-proyecto-contenido">
             <h3>Generador de Párrafos</h3>
             <p>
-              Genera párrafos de ejemplo en el idioma y cantidad que elijas. Ideal para prototipado rápido.
+              Herramienta web que permite generar textos de muestra personalizados eligiendo idioma y número de párrafos. Útil para pruebas de diseño, maquetación y prototipos de contenido.
             </p>
             <p class="tech"><small>JavaScript — DOM</small></p>
             <a href="https://github.com/LeooBringasAtLife/Paragraph-Generator" target="_blank" rel="noopener noreferrer"
@@ -108,36 +116,20 @@
       <div class="acerca-de-mi__contenido">
         <h2>Breve biografía</h2>
         <p>
-          Leonardo Bringas es estudiante de Ingeniería de Software y Desarrollador Web. Inició su formación en
-          programación con un
-          enfoque práctico, centrado en la construcción de aplicaciones funcionales y en la escritura de código claro y
-          mantenible. Trabaja principalmente con HTML, CSS, JavaScript y Python, desarrollando sitios web responsivos,
-          catálogos
-          digitales y aplicaciones que realizan consultas a APIs.
+          Leonardo Bringas es estudiante de Ingeniería de Software y Desarrollador Web. Inició su formación en programación con un enfoque práctico, centrado en la construcción de aplicaciones funcionales y la escritura de código claro y mantenible. Trabaja principalmente con HTML, CSS, JavaScript y Python, desarrollando sitios web responsivos, catálogos digitales y aplicaciones que consumen APIs.
         </p>
 
         <p>
-          A lo largo de su proceso de aprendizaje ha priorizado la experimentación constante mediante proyectos propios,
-          prototipos técnicos y pruebas reales, utilizando el desarrollo como principal herramienta de estudio. Integra
-          herramientas de inteligencia artificial como OpenAI y Claude dentro de su flujo de trabajo para explorar
-          soluciones,
-          automatizar tareas y mejorar la eficiencia en el desarrollo.
+          A lo largo de su proceso de aprendizaje ha priorizado la experimentación constante mediante proyectos propios, prototipos técnicos y pruebas reales, utilizando el desarrollo como principal herramienta de estudio. Integra herramientas modernas en su flujo de trabajo para optimizar procesos y mejorar la eficiencia en el desarrollo.
         </p>
 
         <p>
-          Actualmente continúa su formación académica mientras busca participar en proyectos reales de software,
-          colaborar con
-          otros desarrolladores y seguir profundizando en el diseño y construcción de aplicaciones web bien
-          estructuradas.
+          Actualmente continúa su formación académica mientras busca participar en proyectos reales de software, colaborar con otros desarrolladores y profundizar en el diseño y construcción de aplicaciones web bien estructuradas.
         </p>
 
         <h3>Más corto</h3>
         <p>
-          Leonardo Bringas es estudiante de Ingeniería de Software y Desarrollador Web. Trabaja con HTML, CSS,
-          JavaScript y
-          Python, y se enfoca en el desarrollo de aplicaciones funcionales y proyectos prácticos como parte de su
-          formación
-          técnica continua.
+          Leonardo Bringas es estudiante de Ingeniería de Software y Desarrollador Web. Desarrolla aplicaciones funcionales con HTML, CSS, JavaScript y Python, priorizando código limpio y mantenible como parte de su formación técnica continua.
         </p>
 
         <p>
@@ -147,7 +139,6 @@
     </section>
 
     <section id="tecnologias" class="tech-section">
-      <h2>Tecnologías</h2>
       <div class="slider" aria-label="Carrusel de herramientas">
         <div class="slide-track">
           <div class="slide">
@@ -235,6 +226,7 @@
   </div>
 
   <script src="src/assets/js/index.js"></script>
+  <script src="src/assets/js/theme.js"></script>
 </body>
 
 </html>

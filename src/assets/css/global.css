@@ -1,0 +1,298 @@
+:root {
+  /* Colores principales */
+  --color-primary: #004a88;
+  --color-primary-dark: #003366;
+  --color-primary-light: #66b3ff;
+  
+  /* Colores de fondo */
+  --bg-color: #ffffff;
+  --header-bg: #ffffff;
+  --section-bg: #ffffff;
+  --card-bg: #ffffff;
+  
+  /* Colores de texto */
+  --text-color: #1a1a1a;
+  --text-secondary: #333333;
+  --link-color: #000000;
+  --footer-text: #666666;
+  
+  /* Bordes y sombras */
+  --card-border: hsla(0, 0%, 0%, 0.1);
+  
+  /* Botones */
+  --btn-preview-bg: #ffffff;
+  --btn-preview-text: #004a88;
+  --btn-preview-border: #004a88;
+  --btn-preview-hover-bg: #f0f7ff;
+  
+  /* Menú móvil */
+  --menu-mobile-bg: #ffffff;
+  --menu-mobile-link: #004a88;
+  --menu-mobile-border: #f0f0f0;
+  --menu-dot-color: #004a88;
+  
+  /* Slider */
+  --slider-gradient-start: #ffffff;
+  
+  /* Modal Win95 */
+  --win95-body-bg: #ffffff;
+  
+  /* Espaciado */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 4rem;
+  
+  /* Transiciones */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Tipografía */
+  --font-family: 'Oxygen', sans-serif;
+  --font-size-base: 1rem;
+  --line-height-base: 1.6;
+}
+
+/* Variables CSS - Tema Oscuro */
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --header-bg: #1a1a1a;
+  --section-bg: #1a1a1a;
+  --card-bg: #242424;
+  --card-border: hsla(0, 0%, 100%, 0.1);
+  --link-color: #ffffff;
+  --footer-text: #999999;
+  --slider-gradient-start: #1a1a1a;
+  --btn-preview-bg: #242424;
+  --btn-preview-text: #66b3ff;
+  --btn-preview-border: #66b3ff;
+  --btn-preview-hover-bg: #1a3a5a;
+  --menu-mobile-bg: #1a1a1a;
+  --menu-mobile-link: #66b3ff;
+  --menu-mobile-border: #333333;
+  --menu-dot-color: #66b3ff;
+  --win95-body-bg: #e0e0e0;
+}
+
+/* Reset CSS */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos base del body */
+body {
+  font-family: var(--font-family);
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: var(--line-height-base);
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+/* Tipografía base */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--text-color);
+  line-height: 1.2;
+}
+
+p {
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Botones comunes */
+.btn {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: var(--font-size-base);
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), text-decoration var(--transition-fast);
+  font-family: inherit;
+}
+
+.btn:hover {
+  background-color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+.btn-secundario {
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-secundario:hover {
+  background-color: var(--color-primary-dark);
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.btn-cv {
+  margin-top: 0.8rem;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 0.6rem 1.2rem;
+  font-size: var(--font-size-base);
+  border: 2px solid var(--color-primary);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.6;
+  font-family: inherit;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.btn-cv:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+.btn-preview {
+  background-color: var(--btn-preview-bg);
+  color: var(--btn-preview-text);
+  border: 2px solid var(--btn-preview-border);
+}
+
+.btn-preview:hover {
+  background-color: var(--btn-preview-hover-bg);
+  border-color: var(--btn-preview-border);
+  text-decoration: underline;
+}
+
+/* Enlace de regreso común */
+.back-link {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+  margin-bottom: 1rem;
+}
+
+.back-link:hover {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+/* Footer común */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: var(--spacing-md) var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.p-footer {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--footer-text);
+}
+
+.redes-sociales {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.a-footer {
+  margin: 0 0.5rem;
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+  opacity: 0.5;
+  transition: opacity var(--transition-fast), color var(--transition-fast);
+}
+
+.a-footer:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: var(--btn-preview-text);
+  opacity: 1;
+}
+
+/* Utilidades comunes */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--spacing-md) var(--spacing-sm);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-color);
+  font-weight: 700;
+}
+
+/* Accesibilidad - Focus visible */
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Reducción de movimiento para usuarios que lo prefieren */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Media queries comunes */
+@media (max-width: 768px) {
+  .a-footer {
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .btn-cv {
+    width: 100%;
+  }
+  
+  footer {
+    flex-direction: column;
+  }
+}
+
