@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Blog - Leonardo Bringas</title>
+   <!-- Base styles and variables -->
+   <link rel="stylesheet" href="src/assets/css/style.css">
+   <!-- Blog specific styles -->
+   <link rel="stylesheet" href="src/assets/css/blog.css">
+   <!-- Fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <div class="blog-container">
+      <header class="blog-header">
+         <a href="index.html" class="back-link">Volver a la pagina principal</a>
+      </header>
+
+      <div class="blog-layout">
+         <aside class="blog-sidebar">
+            <div class="sidebar-widget">
+               <h3>Temas del Blog</h3>
+               <ul class="sidebar-list">
+                  <li>
+                     <a href="#" class="active">
+                        <span class="topic-title">El error que me hizo mejor desarrollador</span>
+                     </a>
+                     <ul class="subtopics-list">
+                        <li><a href="#trampa">La trampa de la complejidad</a></li>
+                        <li><a href="#colapso">El colapso</a></li>
+                        <li><a href="#leccion">La lección: Volver a los fundamentos</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </aside>
+
+         <main class="blog-main">
+            <!-- Idea 1: Aprendizaje Real / Proceso -->
+            <article>
+               <h1>El error que me hizo mejor desarrollador</h1>
+               <p class="meta-info">26 de Diciembre, 2025</p>
+
+               <p>Todos queremos escribir código perfecto desde el día uno. Buscamos la arquitectura ideal, el patrón de
+                  diseño exacto y la librería más moderna. Pero mi mayor salto técnico no vino de un tutorial, sino de
+                  un
+                  desastre.</p>
+
+               <section>
+                  <h2 id="trampa">La trampa de la complejidad</h2>
+                  <p>Hace un tiempo, intenté construir una aplicación usando el framework de "moda". Sin entender
+                     realmente
+                     JavaScript, me lancé a copiar y pegar componentes. El resultado visual era aceptable, pero el
+                     código
+                     era una bomba de desastre.</p>
+                  <p>Creía que estaba programando, pero solo estaba configurando herramientas que no entendía en
+                     adsoluto.
+                  </p>
+               </section>
+
+               <section>
+                  <h2 id="colapso">El colapso</h2>
+                  <p>Cuando quise añadir una funcionalidad simple, todo se rompió. No sabía por qué. No entendía el
+                     flujo
+                     de datos, ni el ciclo de vida, ni el DOM. Había construido un castillo de naipes sobre una base
+                     que desconocía.</p>
+               </section>
+
+               <section>
+                  <h2 id="leccion">La lección: Volver a los fundamentos</h2>
+                  <p>Borré todo. Y empecé de nuevo, pero esta vez con <strong>Vanilla JavaScript</strong>. Entendí cómo
+                     funciona el navegador, cómo se renderiza el HTML y cómo el CSS afecta el rendimiento.</p>
+                  <p>Aprendí que las herramientas son útiles, pero los fundamentos son indispensables. Ahora, antes de
+                     usar
+                     una librería, me pregunto: <em>¿Puedo hacer esto yo mismo de una más forma sencilla?</em></p>
+               </section>
+            </article>
+         </main>
+      </div>
+   </div>
+
+   <!-- Script for dark mode check if needed, reusing index.js logic if applicable, 
+          but keeping it simple for now as requested -->
+</body>
+
+</html>

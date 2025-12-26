@@ -1,35 +1,59 @@
 // Smooth scroll para anclas
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href !== '#' && href !== '') {
-            e.preventDefault();
-            const target = document.querySelector(href);
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
-    });
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (href !== '#' && href !== '') {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Cerrar menú móvil si está abierto
+        const menu = document.getElementById('menu');
+        const overlay = document.getElementById('menu-overlay');
+        if (menu) menu.classList.remove('active');
+        if (overlay) overlay.classList.remove('active');
+      }
+    }
+  });
 });
 
-// Animación de entrada para las cards
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
+// Menú Móvil
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
+const menuOverlay = document.getElementById('menu-overlay');
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
+if (menuToggle && menu && menuOverlay) {
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    menuOverlay.classList.toggle('active');
+  });
 
-document.querySelectorAll('.card-proyecto').forEach(card => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(card);
-});
+  menuOverlay.addEventListener('click', () => {
+    menu.classList.remove('active');
+    menuOverlay.classList.remove('active');
+  });
+}
+
+// Modal CV Preview
+const btnVerCv = document.getElementById('btn-ver-cv');
+const modalCv = document.getElementById('modal-cv');
+const closeBtnCv = document.getElementById('close-modal-cv');
+
+if (btnVerCv && modalCv && closeBtnCv) {
+  btnVerCv.onclick = function () {
+    modalCv.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+
+  closeBtnCv.onclick = function () {
+    modalCv.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  modalCv.onclick = function (e) {
+    if (e.target === modalCv) {
+      modalCv.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  };
+}

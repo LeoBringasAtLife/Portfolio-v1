@@ -1,335 +1,240 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Portfolio de Leonardo Bringas – Desarrollador web junior con experiencia en HTML, CSS, JavaScript y más."
-    />
-    <meta name="author" content="Leonardo Bringas" />
-    <meta
-      name="keywords"
-      content="desarrollador web, frontend, HTML, CSS, JavaScript, portfolio"
-    />
-    <link rel="stylesheet" href="src/assets/css/style.css" />
-    <link rel="icon" href="assets/tools/logo.ico" type="image/x-icon" />
-    <title>LeoBringasAtLife | Portfolio Web</title>
-  </head>
 
-  <body id="top">
-    <!-- Header -->
-    <header class="encabezado">
-      <div class="perfil">
-        <img
-          class="foto"
-          src="src/assets/image/leo.png"
-          alt="Foto de Leonardo Bringas"
-          loading="lazy"
-        />
-        <div class="info">
-          <h1 class="titulo-enlace"><span>@LeoBringasAtLife</span></h1>
-          <p class="descripcion">
-            Estudiante de Ingeniería de Software | Desarrollador Web | Python e
-            IA
-          </p>
-          <a
-            href="pdf/CV_LEONARDO_ISAIAS_BRINGAS_MONTERO.pdf"
-            download
-            class="btn-cv"
-            >Descargar CV</a
-          >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfolio de Leonardo Bringas - Desarrollador web junior con experiencia en HTML, CSS, JavaScript y más." />
+  <meta name="author" content="Leonardo Bringas" />
+  <meta name="keywords" content="desarrollador web, frontend, HTML, CSS, JavaScript, portfolio" />
+  <link rel="stylesheet" href="src/assets/css/style.css" />
+  <link rel="icon" href="src/assets/tools/logo.ico" type="image/x-icon" />
+
+  <title>LeoBringasAtLife | Portfolio Web</title>
+</head>
+
+<body id="top">
+  <header class="encabezado">
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+      <span class="menu-dot"></span>
+      <span class="menu-dot"></span>
+      <span class="menu-dot"></span>
+    </button>
+
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <div class="perfil">
+      <img class="foto" src="src/assets/image/leo.jpeg" alt="Foto de Leonardo Bringas" loading="lazy" />
+      <div class="info">
+        <h1 class="titulo-enlace"><span>@LeoBringasAtLife</span></h1>
+        <p class="descripcion">
+          Estudiante de Ingeniería de Software | Desarrollador Web | Python e
+          IA
+        </p>
+        <div class="acciones-cv">
+          <a href="pdf/CV_LEONARDO_ISAIAS_BRINGAS_MONTERO.pdf" download class="btn-cv">Descargar CV</a>
+          <button id="btn-ver-cv" class="btn-cv btn-preview">Vista Previa CV</button>
         </div>
       </div>
+    </div>
 
-      <nav class="menu" id="menu">
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#proyectos-destacados">Proyectos</a>
-        <a href="#tecnologias">Tecnologías</a>
-      </nav>
-    </header>
+    <nav class="menu" id="menu">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos-destacados">Proyectos</a>
+      <a href="#tecnologias">Tecnologías</a>
+      <a href="blog.html">Blog</a>
+      <a href="fotos.html">Fotos</a>
+    </nav>
+  </header>
 
-    <!-- Main -->
-    <main>
-      <!-- Acerca de mí -->
-      <section id="sobre-mi" class="acerca-de-mi">
-        <div class="acerca-de-mi__contenido">
-          <h2>Acerca de mí</h2>
-          <p>
-            Hola — soy Leonardo Bringas. Me encontrás convirtiendo ideas en
-            páginas y pequeñas aplicaciones que funcionan y se ven bien. Llevo
-            meses dedicados a aprender y practicar desarrollo web; disfruto
-            construyendo interfaces limpias, accesibles y con sentido práctico.
-          </p>
-          <p>
-            Trabajo con HTML, CSS y JavaScript, y estoy incorporando Python a mi
-            caja de herramientas. En proyectos reales he creado desde catálogos
-            responsivos hasta utilidades que consumen APIs (sí, esas que te
-            salvan el día). Me gusta aprender haciendo: prototipos rápidos,
-            demos útiles y código que otros puedan leer y mejorar.
-          </p>
+  <main>
+    <section class="proyectos-destacados" id="proyectos-destacados">
+      <h2>Proyectos Destacados</h2>
+      <div class="cards-destacados">
+        <!-- Paint JS Win95 -->
+        <article class="card-proyecto">
+          <img src="src/assets/image/screenshot-paint-js.png" width="240" height="240" alt="Miniatura Paint JS Win95"
+            loading="lazy" />
+          <div class="card-proyecto-contenido">
+            <h3>Paint JS Win95</h3>
+            <p>
+              Clone de Microsoft Paint con estética retro. Un ejercicio avanzado de manipulación de Canvas y UI clásica.
+            </p>
+            <p class="tech"><small>JavaScript — Canvas</small></p>
+            <a href="https://github.com/LeooBringasAtLife/Paint-JS-Win95" target="_blank" rel="noopener noreferrer"
+              class="btn">Ver proyecto</a>
+          </div>
+        </article>
 
-          <p>
-            Busco oportunidades para seguir creciendo en equipo, aportar
-            soluciones prácticas y participar en proyectos donde pueda dejar mi
-            sello. ¿Querés ver lo que hice? Bajá mi CV o mirá los proyectos más
-            abajo.
-          </p>
+        <!-- Searcher - Wikipedia -->
+        <article class="card-proyecto">
+          <img src="src/assets/image/screenshot-wikipedia.png" width="240" height="240"
+            alt="Miniatura Buscador Wikipedia" loading="lazy" />
+          <div class="card-proyecto-contenido">
+            <h3>Buscador Wikipedia</h3>
+            <p>
+              Herramienta que consulta la API de Wikipedia para mostrar resultados al instante. Práctica de Fetch API y
+              manejo de datos.
+            </p>
+            <p class="tech"><small>HTML — Fetch API</small></p>
+            <a href="https://github.com/LeooBringasAtLife/Searcher-Wikipedia" target="_blank" rel="noopener noreferrer"
+              class="btn">Ver proyecto</a>
+          </div>
+        </article>
 
-          <p class="firma"><strong>— Leonardo Bringas</strong></p>
-        </div>
-      </section>
+        <!-- Paragraph Generator -->
+        <article class="card-proyecto">
+          <img src="src/assets/image/screenshot-generador-parrafos.png" width="240" height="240"
+            alt="Miniatura Generador de Párrafos" loading="lazy" />
+          <div class="card-proyecto-contenido">
+            <h3>Generador de Párrafos</h3>
+            <p>
+              Genera párrafos de ejemplo en el idioma y cantidad que elijas. Ideal para prototipado rápido.
+            </p>
+            <p class="tech"><small>JavaScript — DOM</small></p>
+            <a href="https://github.com/LeooBringasAtLife/Paragraph-Generator" target="_blank" rel="noopener noreferrer"
+              class="btn">Ver proyecto</a>
+          </div>
+        </article>
+      </div>
+      <div style="text-align: center; margin-top: 2rem">
+        <a href="https://github.com/LeoBringasAtLife" class="btn btn-secundario" target="_blank"
+          rel="noopener noreferrer">Ver GitHub</a>
+      </div>
+    </section>
 
-      <!-- Proyectos -->
-      <section class="proyectos-destacados" id="proyectos-destacados">
-        <h2>Proyectos Destacados</h2>
-        <div class="cards-destacados">
-          <!-- Tienda de libros - Walter Escalante -->
-          <article class="card-proyecto">
-            <img
-              src="src/assets/image/screenshot.png"
-              width="240"
-              height="240"
-              alt="Miniatura Tienda de libros Walter Escalante"
-              loading="lazy"
-            />
-            <div class="card-proyecto-contenido">
-              <h3>Tienda de libros — Walter Escalante</h3>
-              <p>
-                Catálogo responsivo con enlaces de compra vía WhatsApp. UI
-                optimizada con Tailwind CLI.
-              </p>
-              <p class="tech"><small>HTML — Tailwind</small></p>
-              <a
-                href="https://github.com/LeooBringasAtLife/tiendaLibrosdeWalterEscalante"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn"
-                >Ver proyecto</a
-              >
-            </div>
-          </article>
+    <section id="sobre-mi" class="acerca-de-mi">
+      <div class="acerca-de-mi__contenido">
+        <h2>Breve biografía</h2>
+        <p>
+          Leonardo Bringas es estudiante de Ingeniería de Software y Desarrollador Web. Inició su formación en
+          programación con un
+          enfoque práctico, centrado en la construcción de aplicaciones funcionales y en la escritura de código claro y
+          mantenible. Trabaja principalmente con HTML, CSS, JavaScript y Python, desarrollando sitios web responsivos,
+          catálogos
+          digitales y aplicaciones que realizan consultas a APIs.
+        </p>
 
-          <!-- Paint JS Win95 -->
-          <article class="card-proyecto">
-            <img
-              src="src/assets/image/screenshot-2.png"
-              width="240"
-              height="240"
-              alt="Miniatura Paint JS Win95"
-              loading="lazy"
-            />
-            <div class="card-proyecto-contenido">
-              <h3>Paint JS — Estética Win95</h3>
-              <p>
-                Clone simple de Microsoft Paint con estética retro. Buen
-                ejercicio de canvas y UI clásica.
-              </p>
-              <p class="tech"><small>JavaScript — Canvas</small></p>
-              <a
-                href="https://github.com/LeooBringasAtLife/Paint-JS-Win95"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn"
-                >Ver proyecto</a
-              >
-            </div>
-          </article>
+        <p>
+          A lo largo de su proceso de aprendizaje ha priorizado la experimentación constante mediante proyectos propios,
+          prototipos técnicos y pruebas reales, utilizando el desarrollo como principal herramienta de estudio. Integra
+          herramientas de inteligencia artificial como OpenAI y Claude dentro de su flujo de trabajo para explorar
+          soluciones,
+          automatizar tareas y mejorar la eficiencia en el desarrollo.
+        </p>
 
-          <!-- Searcher - Wikipedia -->
-          <article class="card-proyecto">
-            <img
-              src="src/assets/image/screenshot-3.png"
-              width="240"
-              height="240"
-              alt="Miniatura Buscador Wikipedia"
-              loading="lazy"
-            />
-            <div class="card-proyecto-contenido">
-              <h3>Buscador Wikipedia</h3>
-              <p>
-                Buscador que muestra resultados de Wikipedia al instante.
-                Práctica de consumo de APIs y manejo de resultados.
-              </p>
-              <p class="tech"><small>HTML — Fetch API</small></p>
-              <a
-                href="https://github.com/LeooBringasAtLife/Searcher-Wikipedia"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn"
-                >Ver proyecto</a
-              >
-            </div>
-          </article>
+        <p>
+          Actualmente continúa su formación académica mientras busca participar en proyectos reales de software,
+          colaborar con
+          otros desarrolladores y seguir profundizando en el diseño y construcción de aplicaciones web bien
+          estructuradas.
+        </p>
 
-          <!-- Mini traductor -->
-          <article class="card-proyecto">
-            <img
-              src="src/assets/image/screenshot-4.png"
-              width="240"
-              height="240"
-              alt="Miniatura Mini traductor"
-              loading="lazy"
-            />
-            <div class="card-proyecto-contenido">
-              <h3>Google traductor</h3>
-              <p>
-                Traductor simple para pasar texto entre varios idiomas al
-                instante. Buen ejercicio de consumo de APIs y manejo de texto.
-              </p>
-              <p class="tech"><small>JavaScript — APIs</small></p>
-              <a
-                href="https://github.com/LeooBringasAtLife/Google-Translate"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn"
-                >Ver proyecto</a
-              >
-            </div>
-          </article>
+        <h3>Más corto</h3>
+        <p>
+          Leonardo Bringas es estudiante de Ingeniería de Software y Desarrollador Web. Trabaja con HTML, CSS,
+          JavaScript y
+          Python, y se enfoca en el desarrollo de aplicaciones funcionales y proyectos prácticos como parte de su
+          formación
+          técnica continua.
+        </p>
 
-          <!-- Generador de párrafos -->
-          <article class="card-proyecto">
-            <img
-              src="src/assets/image/screenshot-5.png"
-              width="240"
-              height="240"
-              alt="Miniatura Generador de párrafos"
-              loading="lazy"
-            />
-            <div class="card-proyecto-contenido">
-              <h3>Generador de párrafos</h3>
-              <p>
-                Generador de párrafos de ejemplo configurable por idioma y
-                cantidad — ideal para maquetas, pruebas y contenidos de relleno.
-              </p>
-              <p class="tech"><small>JavaScript — DOM</small></p>
-              <a
-                href="https://github.com/LeooBringasAtLife/Paragraph-Generator"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn"
-                >Ver proyecto</a
-              >
-            </div>
-          </article>
+        <p>
+          Visita mi <a href="https://github.com/LeooBringasAtLife" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </p>
+      </div>
+    </section>
 
-          <!-- Generador de códigos QR -->
-          <article class="card-proyecto">
-            <img
-              src="src/assets/image/screenshot-2.png"
-              width="240"
-              height="240"
-              alt="Miniatura Generador de QR"
-              loading="lazy"
-            />
-            <div class="card-proyecto-contenido">
-              <h3>Generador de códigos QR</h3>
-              <p>
-                Convierte URLs en códigos QR al instante. Herramienta práctica
-                para compartir enlaces y recursos rápidamente.
-              </p>
-              <p class="tech">
-                <small>JavaScript — Canvas / biblioteca</small>
-              </p>
-              <a
-                href="https://github.com/LeooBringasAtLife/QR-Generator"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn"
-                >Ver proyecto</a
-              >
-            </div>
-          </article>
-        </div>
-        <div style="text-align: center; margin-top: 2rem">
-          <a
-            href="https://github.com/LeoBringasAtLife"
-            class="btn btn-secundario"
-            >Ver GitHub</a
-          >
-        </div>
-      </section>
-
-      <!-- Tecnologías -->
-      <section id="tecnologias" class="tech-section">
-        <h2>Tecnologías</h2>
-        <div class="slider" aria-label="Carrusel de herramientas">
-          <div class="slide-track">
-            <div class="slide">
-              <img src="src/assets/tools/icons-html.svg" alt="HTML" />
-              <p>HTML</p>
-            </div>
-            <div class="slide">
-              <img src="src/assets/tools/icons-css.svg" alt="CSS" />
-              <p>CSS</p>
-            </div>
-            <div class="slide">
-              <img
-                src="src/assets/tools/icons-javascript.svg"
-                alt="JavaScript"
-              />
-              <p>JavaScript</p>
-            </div>
-            <div class="slide">
-              <img src="src/assets/tools/icons-python.svg" alt="Python" />
-              <p>Python</p>
-            </div>
-            <div class="slide">
-              <img src="src/assets/tools/icons-git.svg" alt="Git" />
-              <p>Git</p>
-            </div>
-            <div class="slide">
-              <img
-                src="src/assets/tools/icons-visual-studio-code-2019.svg"
-                alt="VS Code"
-              />
-              <p>VS Code</p>
-            </div>
-
-            <!-- Duplicados para efecto infinito -->
-            <div class="slide">
-              <img src="src/assets/tools/icons-html.svg" alt="HTML" />
-              <p>HTML</p>
-            </div>
-            <div class="slide">
-              <img src="src/assets/tools/icons-css.svg" alt="CSS" />
-              <p>CSS</p>
-            </div>
-            <div class="slide">
-              <img
-                src="src/assets/tools/icons-javascript.svg"
-                alt="JavaScript"
-              />
-              <p>JavaScript</p>
-            </div>
-            <div class="slide">
-              <img src="src/assets/tools/icons-python.svg" alt="Python" />
-              <p>Python</p>
-            </div>
-            <div class="slide">
-              <img src="src/assets/tools/icons-git.svg" alt="Git" />
-              <p>Git</p>
-            </div>
-            <div class="slide">
-              <img
-                src="src/assets/tools/icons-visual-studio-code-2019.svg"
-                alt="VS Code"
-              />
-              <p>VS Code</p>
-            </div>
+    <section id="tecnologias" class="tech-section">
+      <h2>Tecnologías</h2>
+      <div class="slider" aria-label="Carrusel de herramientas">
+        <div class="slide-track">
+          <div class="slide">
+            <img src="src/assets/tools/icons-html.svg" alt="HTML" />
+            <p>HTML</p>
+          </div>
+          <div class="slide">
+            <img src="src/assets/tools/icons-css.svg" alt="CSS" />
+            <p>CSS</p>
+          </div>
+          <div class="slide">
+            <img src="src/assets/tools/icons-javascript.svg" alt="JavaScript" />
+            <p>JavaScript</p>
+          </div>
+          <div class="slide">
+            <img src="src/assets/tools/icons-python.svg" alt="Python" />
+            <p>Python</p>
+          </div>
+          <div class="slide">
+            <img src="src/assets/tools/icons-git.svg" alt="Git" />
+            <p>Git</p>
+          </div>
+          <div class="slide">
+            <img src="src/assets/tools/icons-visual-studio-code-2019.svg" alt="VS Code" />
+            <p>VS Code</p>
+          </div>
+          <div class="slide">
+            <img src="src/assets/tools/icons-html.svg" alt="HTML" />
+            <p>HTML</p>
+          </div>
+          <div class="slide">
+            <img src="src/assets/tools/icons-css.svg" alt="CSS" />
+            <p>CSS</p>
+          </div>
+          <div class="slide">
+            <img src="src/assets/tools/icons-javascript.svg" alt="JavaScript" />
+            <p>JavaScript</p>
+          </div>
+          <div class="slide">
+            <img src="src/assets/tools/icons-python.svg" alt="Python" />
+            <p>Python</p>
+          </div>
+          <div class="slide">
+            <img src="src/assets/tools/icons-git.svg" alt="Git" />
+            <p>Git</p>
+          </div>
+          <div class="slide">
+            <img src="src/assets/tools/icons-visual-studio-code-2019.svg" alt="VS Code" />
+            <p>VS Code</p>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-      <p class="p-footer">© 2025 Leonardo Bringas</p>
-      <a class="a-footer" href="">Instagram</a
-      ><a class="a-footer" href="">GitHub</a
-      ><a class="a-footer" href="">Twitter/X</a>
-    </footer>
+  <footer>
+    <p class="p-footer">© 2025 Leonardo Bringas</p>
+    <div class="redes-sociales">
+      <a href="https://github.com/LeooBringasAtLife" class="a-footer" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/" class="a-footer" target="_blank">LinkedIn</a>
+      <a href="https://x.com/leobringaslife" class="a-footer" target="_blank">Twitter/X</a>
+      <a href="https://instagram.com/leobringasatlife" class="a-footer" target="_blank">Instagram</a>
+      <a href="https://codepen.io/Leoo-BringasAtLife" class="a-footer" target="_blank">CodePen</a>
+      <a href="https://draft.blogger.com/blog/posts/9196245956103519491" class="a-footer" target="_blank">Blogger</a>
+    </div>
+  </footer>
 
-    <script src="assets/js/index.js"></script>
-  </body>
+  <!-- Modal Win95 para Preview de CV -->
+  <div id="modal-cv" class="modal-win95">
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">CV_LEONARDO_ISAIAS_BRINGAS_MONTERO.exe</div>
+        <div class="title-bar-controls">
+          <button aria-label="Close" id="close-modal-cv"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <iframe src="pdf/CV_LEONARDO_ISAIAS_BRINGAS_MONTERO.pdf" width="100%" height="100%" frameborder="0"></iframe>
+      </div>
+      <div class="status-bar">
+        <p class="status-bar-field">Status: Ready</p>
+        <p class="status-bar-field">100%</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="src/assets/js/index.js"></script>
+</body>
+
 </html>

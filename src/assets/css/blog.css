@@ -1,0 +1,208 @@
+/* Blog Specific Styles - Minimalist & Content Focused */
+
+/* Layout container for the blog */
+.blog-container {
+  max-width: 1100px; /* Increased width for sidebar layout */
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Header adjustments */
+.blog-header {
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.back-link {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: color 0.2s;
+  margin-bottom: 1rem;
+}
+
+.back-link:hover {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+/* Main Layout Grid */
+.blog-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Sidebar Styles */
+.blog-sidebar {
+  position: sticky;
+  top: 2rem;
+}
+
+.sidebar-widget h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  border-bottom: 2px solid var(--card-border);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-list li {
+  margin-bottom: 1.2rem;
+}
+
+.sidebar-list a {
+  display: block;
+  text-decoration: none;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+  padding: 0.5rem;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-list a:hover,
+.sidebar-list a.active {
+  background-color: var(--card-bg);
+  border-left-color: var(--link-color);
+  color: var(--text-color);
+}
+
+.topic-title {
+  display: block;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+/* Subtopics Styles */
+.subtopics-list {
+  list-style: none;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  border-left: 1px solid var(--card-border);
+  margin-left: 0.5rem;
+}
+
+.subtopics-list li {
+  margin-bottom: 0.5rem;
+}
+
+.subtopics-list a {
+  font-size: 0.9rem;
+  padding: 0.3rem 0.5rem;
+  color: var(--text-secondary);
+  border-left: none; /* Reset inherited border */
+}
+
+.subtopics-list a:hover {
+  background-color: transparent;
+  color: var(--link-color);
+  text-decoration: underline;
+  border-left: none;
+}
+
+/* Article Typography */
+.blog-main article {
+  margin-bottom: 5rem;
+  max-width: 720px; /* Keep reading width optimal */
+}
+
+article h1 {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.meta-info {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-family: monospace;
+  opacity: 0.8;
+}
+
+article section {
+  margin-top: 2.5rem;
+}
+
+article h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+article p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  color: var(--text-secondary);
+}
+
+article strong {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+/* Code blocks */
+pre {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border: 1px solid var(--card-border);
+  font-size: 0.9rem;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--text-color);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .blog-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .blog-sidebar {
+    position: static;
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 2rem;
+  }
+
+  .sidebar-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  article h1 {
+    font-size: 1.8rem;
+  }
+
+  .blog-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .sidebar-list {
+    grid-template-columns: 1fr;
+  }
+}
